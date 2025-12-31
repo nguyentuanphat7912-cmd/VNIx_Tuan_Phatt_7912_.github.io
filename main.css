@@ -1,1 +1,12 @@
-
+h1 {
+  body:linear-gradient(to right ,red,green,blue,pink);
+}
+h2 {
+  body:red;
+}
+body {
+  background: linear-gradient(to right ,red,green,blue,pink);
+}
+h3 {
+  body:green;
+} 
