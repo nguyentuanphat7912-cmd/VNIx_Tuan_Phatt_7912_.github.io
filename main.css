@@ -1,25 +1,50 @@
-h1 {
-  color: linear-gradient(to right ,red,green,blue,pink,yellow,purple);
-  /* 3. Lệnh chạy hoạt hình: Tên là "mauChay", chạy trong 15 giây, lặp vô tận (infinite) */
-  animation: mauchay 15s ease infinite;
-  /* Đảm bảo nền phủ kín màn hình */
-  height: 100 vh;
-  margin:0;
-}
+/* 1. Cấu hình cho body (Nền trang web) */
 body {
-  background: linear-gradient(to right ,red,green,blue,pink,purple,Orange,Silver,Lightblue);
-    /* 2. Phóng to nền lên 400% để có chỗ cho nó di chuyển */
-    background-size: 400% 400%;
-    
-    /* 3. Lệnh chạy hoạt hình: Tên là "mauChay", chạy trong 15 giây, lặp vô tận (infinite) */
-    animation: mauChay 15s ease infinite;
-    
-    /* Đảm bảo nền phủ kín màn hình */
-    height: 100vh;
-    margin: 0;
+  /* Sửa lỗi tên màu: Light blue -> lightblue */
+  background: linear-gradient(to right, red, green, blue, pink, purple, Orange, Silver, lightblue);
+  
+  /* Phóng to nền lên 400% */
+  background-size: 400% 400%;
+  
+  /* Chạy hoạt hình */
+  animation: mauChay 15s ease infinite;
+  
+  /* Sửa lỗi khoảng trắng: 100 vh -> 100vh */
+  height: 100vh;
+  margin: 0;
+  
+  /* Để căn giữa nội dung body (tuỳ chọn) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* 4. Viết kịch bản di chuyển (Keyframes) */
+/* 2. Cấu hình cho thẻ H1 (Chữ cầu vồng) */
+h1 {
+  /* Gradient cho chữ phải dùng background */
+  background: linear-gradient(to right, red, green, blue, pink, yellow, purple);
+  background-size: 200% auto; /* Để animation hoạt động trên chữ */
+  
+  /* Cắt nền theo hình dáng chữ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* Làm màu chữ trong suốt để hiện nền phía sau */
+  color: transparent;
+
+  /* Animation cho chữ */
+  animation: mauChay 15s ease infinite;
+  
+  margin: 0;
+  padding: 20px;
+  font-size: 3rem; /* Tăng kích thước chữ cho đẹp */
+}
+
+h3 {
+  color: green;
+}
+
+/* 3. Khung chuyển động (Keyframes) */
 @keyframes mauChay {
     0% {
         background-position: 0% 50%;
@@ -30,16 +55,26 @@ body {
     100% {
         background-position: 0% 50%;
     }
-
 }
-h3 {
-  color:green;
-} 
+
+/* 4. Sửa lỗi nesting cho .container */
+/* Thay vì viết lồng vào nhau, hãy viết selector cụ thể */
 .container {
-  /* Căn giữa tất cả văn bản và hình ảnh bên trong */
-  h1,h2,img {
-  text-align: center;
-    margin-bottom: 20px;
-}
+  width: 100%;
+  text-align: center; /* Căn giữa nội dung bên trong */
 }
 
+.container h1, 
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container img {
+  margin-bottom: 20px;
+  /* Để căn giữa ảnh, text-align: center ở cha là đủ nếu ảnh là inline. 
+     Nếu muốn chắc chắn hơn: */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
