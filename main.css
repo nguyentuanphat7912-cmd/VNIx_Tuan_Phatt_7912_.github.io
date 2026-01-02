@@ -5,13 +5,9 @@ h1 {
   /* Đảm bảo nền phủ kín màn hình */
   height: 100 vh;
   margin:0;
-  
-}
-h2 {
-  color:red;
 }
 body {
-  background: linear-gradient(to right ,red,green,blue,pink,purple,Orange,Silver,Light blue);
+  background: linear-gradient(to right ,red,green,blue,pink,purple,Orange,Silver,Lightblue);
     /* 2. Phóng to nền lên 400% để có chỗ cho nó di chuyển */
     background-size: 400% 400%;
     
