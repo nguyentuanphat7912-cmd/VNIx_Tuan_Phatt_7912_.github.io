@@ -1,7 +1,5 @@
 h1 {
-  color: linear-gradient(to right ,red,green,blue,pink,yellow);
-   /* 2. Phóng to nền lên 400% để có chỗ cho nó di chuyển */
-  background-size:400% 400%
+  color: linear-gradient(to right ,red,green,blue,pink,yellow,purple);
   /* 3. Lệnh chạy hoạt hình: Tên là "mauChay", chạy trong 15 giây, lặp vô tận (infinite) */
   animation: mauchay 15s ease infinite;
   /* Đảm bảo nền phủ kín màn hình */
