@@ -11,7 +11,7 @@ h2 {
   color:red;
 }
 body {
-  background: linear-gradient(to right ,red,green,blue,pink);
+  background: linear-gradient(to right ,red,green,blue,pink,purple,Orange,Silver,Light blue);
     /* 2. Phóng to nền lên 400% để có chỗ cho nó di chuyển */
     background-size: 400% 400%;
     
