@@ -40,20 +40,3 @@ h3 {
   color:green;
 } 
 
-.container {
-  font-family: arial;
-  font-size: 24px;
-  margin: 25px;
-  width: 350px;
-  height: 200px;
-  outline: dashed 1px black;
-
-}
-
-p {
-
- 
-
-  text-align: center;
-
-}
