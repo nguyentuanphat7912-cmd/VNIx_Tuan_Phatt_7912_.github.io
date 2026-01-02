@@ -39,4 +39,11 @@ body {
 h3 {
   color:green;
 } 
+.container {
+  /* Căn giữa tất cả văn bản và hình ảnh bên trong */
+  h1,h2,img {
+  text-align: center;
+    margin-bottom: 20px;
+}
+}
 
